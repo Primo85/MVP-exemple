@@ -52,11 +52,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gy-7x-sOZ">
+                                <rect key="frame" x="-0.5" y="120" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7su-9H-ojB"/>
+                                </constraints>
+                                <state key="normal" title="presenter"/>
+                                <connections>
+                                    <action selector="changePresenter" destination="BYZ-38-t0r" eventType="touchUpInside" id="EPQ-cO-iwP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6gy-7x-sOZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Jur-df-Zyj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KcC-ok-fXN" secondAttribute="trailing" constant="5" id="M9z-C6-ioF"/>
+                            <constraint firstItem="6gy-7x-sOZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="jRJ-m0-sm4"/>
                             <constraint firstItem="KcC-ok-fXN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="n4P-fJ-ezH"/>
+                            <constraint firstItem="6gy-7x-sOZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="y8a-jp-lKJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KcC-ok-fXN" secondAttribute="bottom" constant="20" id="zTD-Ag-xiF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol Presenter: class {
+    weak var view: ViewProtocol? { get set }
+    func changeImage()
+    func changeColor()
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
@@ -18,8 +24,14 @@ class ViewController: UIViewController {
     @IBAction func changeColor() {
         presenter.changeColor()
     }
+    @IBAction func changePresenter() {
+        router.showVCWithImage(image: #imageLiteral(resourceName: "Be"))
+    }
     lazy var presenter: Presenter = {
-        return Presenter(view: self)
+        return PresenterClass(view: self)
+    }()
+    lazy var router: Router = {
+        return Router(source: self)
     }()
 }
 

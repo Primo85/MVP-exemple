@@ -13,7 +13,7 @@ protocol ViewProtocol: class {
     func setColor(color: UIColor)
 }
 
-class Presenter {
+class PresenterClass: Presenter {
     
     init(view: ViewProtocol) {
         self.view = view
@@ -55,4 +55,7 @@ class Presenter {
     private var colorFlag = 0
     private let colors: [UIColor] =
     [.red, .orange, .yellow, .green, .blue, .black, .darkGray, .gray, .lightGray, .white]
+    deinit {
+        print("deinit PresenterClass")
+    }
 }
