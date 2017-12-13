@@ -17,6 +17,7 @@ class ImageViewController: UIViewController {
         super.viewDidLoad()
         imageView.frame = view.frame
         view.addSubview(imageView)
+        imageView.contentMode = .scaleAspectFit
         imageView.image = image
     }
 }

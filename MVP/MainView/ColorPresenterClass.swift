@@ -8,18 +8,19 @@
 
 import UIKit
 
-protocol ViewProtocol: class {
-    func setImage(image: UIImage)
-    func setColor(color: UIColor)
-}
-
-class PresenterClass: Presenter {
+class ColorPresenterClass: AnimalsPresenterProtocol {
     
-    init(view: ViewProtocol) {
+    init(view: AnimalsViewProtocol) {
         self.view = view
+        setInitialView()
     }
     
-    weak var view: ViewProtocol?
+    weak var view: AnimalsViewProtocol?
+    
+    func setInitialView() {
+        changeImage()
+        changeColor()
+    }
     
     func changeImage() {
         // many many line of code
@@ -54,8 +55,8 @@ class PresenterClass: Presenter {
     
     private var colorFlag = 0
     private let colors: [UIColor] =
-    [.red, .orange, .yellow, .green, .blue, .black, .darkGray, .gray, .lightGray, .white]
+    [.red, .orange, .yellow, .green, .blue]
     deinit {
-        print("deinit PresenterClass")
+        print("deinit ColorPresenterClass")
     }
 }
