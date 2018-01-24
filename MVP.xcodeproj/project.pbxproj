@@ -7,23 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FD2ED541FE12DAA00590D95 /* UIView+bwImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2ED531FE12DAA00590D95 /* UIView+bwImage.swift */; };
 		ED47CAD01FDBE5DB009F9E78 /* AnimalsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED47CACF1FDBE5DB009F9E78 /* AnimalsRouter.swift */; };
-		ED47CAD21FDBE765009F9E78 /* BlackAndWhitePresenterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED47CAD11FDBE765009F9E78 /* BlackAndWhitePresenterClass.swift */; };
-		ED47CAD41FDBEBD7009F9E78 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED47CAD31FDBEBD7009F9E78 /* ImageViewController.swift */; };
+		ED47CAD41FDBEBD7009F9E78 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED47CAD31FDBEBD7009F9E78 /* ImageDetailViewController.swift */; };
 		EDED86191FD7D514000D5549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDED86181FD7D514000D5549 /* AppDelegate.swift */; };
 		EDED861B1FD7D514000D5549 /* AnimalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDED861A1FD7D514000D5549 /* AnimalsViewController.swift */; };
 		EDED861E1FD7D514000D5549 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDED861C1FD7D514000D5549 /* Main.storyboard */; };
 		EDED86201FD7D514000D5549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDED861F1FD7D514000D5549 /* Assets.xcassets */; };
 		EDED86231FD7D514000D5549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDED86211FD7D514000D5549 /* LaunchScreen.storyboard */; };
-		EDED862B1FD7D779000D5549 /* ColorPresenterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDED862A1FD7D779000D5549 /* ColorPresenterClass.swift */; };
+		EDED862B1FD7D779000D5549 /* AnimalsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDED862A1FD7D779000D5549 /* AnimalsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1FD2ED531FE12DAA00590D95 /* UIView+bwImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+bwImage.swift"; sourceTree = "<group>"; };
 		ED47CACF1FDBE5DB009F9E78 /* AnimalsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRouter.swift; sourceTree = "<group>"; };
-		ED47CAD11FDBE765009F9E78 /* BlackAndWhitePresenterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackAndWhitePresenterClass.swift; sourceTree = "<group>"; };
-		ED47CAD31FDBEBD7009F9E78 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		ED47CAD31FDBEBD7009F9E78 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		EDED86151FD7D514000D5549 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDED86181FD7D514000D5549 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDED861A1FD7D514000D5549 /* AnimalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +27,7 @@
 		EDED861F1FD7D514000D5549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDED86221FD7D514000D5549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDED86241FD7D514000D5549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDED862A1FD7D779000D5549 /* ColorPresenterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPresenterClass.swift; sourceTree = "<group>"; };
+		EDED862A1FD7D779000D5549 /* AnimalsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,9 +45,8 @@
 			isa = PBXGroup;
 			children = (
 				EDED861A1FD7D514000D5549 /* AnimalsViewController.swift */,
+				EDED862A1FD7D779000D5549 /* AnimalsPresenter.swift */,
 				ED47CACF1FDBE5DB009F9E78 /* AnimalsRouter.swift */,
-				EDED862A1FD7D779000D5549 /* ColorPresenterClass.swift */,
-				ED47CAD11FDBE765009F9E78 /* BlackAndWhitePresenterClass.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -77,8 +72,7 @@
 			children = (
 				EDED86181FD7D514000D5549 /* AppDelegate.swift */,
 				1FD2ED521FE1286600590D95 /* MainView */,
-				ED47CAD31FDBEBD7009F9E78 /* ImageViewController.swift */,
-				1FD2ED531FE12DAA00590D95 /* UIView+bwImage.swift */,
+				ED47CAD31FDBEBD7009F9E78 /* ImageDetailViewController.swift */,
 				EDED861C1FD7D514000D5549 /* Main.storyboard */,
 				EDED861F1FD7D514000D5549 /* Assets.xcassets */,
 				EDED86211FD7D514000D5549 /* LaunchScreen.storyboard */,
@@ -160,12 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED47CAD01FDBE5DB009F9E78 /* AnimalsRouter.swift in Sources */,
-				1FD2ED541FE12DAA00590D95 /* UIView+bwImage.swift in Sources */,
-				EDED862B1FD7D779000D5549 /* ColorPresenterClass.swift in Sources */,
+				EDED862B1FD7D779000D5549 /* AnimalsPresenter.swift in Sources */,
 				EDED861B1FD7D514000D5549 /* AnimalsViewController.swift in Sources */,
 				EDED86191FD7D514000D5549 /* AppDelegate.swift in Sources */,
-				ED47CAD41FDBEBD7009F9E78 /* ImageViewController.swift in Sources */,
-				ED47CAD21FDBE765009F9E78 /* BlackAndWhitePresenterClass.swift in Sources */,
+				ED47CAD41FDBEBD7009F9E78 /* ImageDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,53 +8,39 @@
 
 import UIKit
 
-// MARK: - Protocols
-protocol AnimalsPresenterProtocol: class {
-    weak var view: AnimalsViewProtocol? { get set }
-    func setInitialView()
-    func changeImage()
-    func changeColor()
-}
-protocol AnimalsViewProtocol: class {
-    func setImage(image: UIImage)
-    func setColor(color: UIColor)
-}
-
-
-// MARK: - ViewController: UIViewController
-class AnimalsViewController: UIViewController {
+final class AnimalsViewController: UIViewController {
     
-    lazy var presenter: AnimalsPresenterProtocol = {
-        return ColorPresenterClass(view: self)
+    // tutaj zawsze presenter i router
+    lazy var presenter: AnimalsPresenter = {
+        return AnimalsPresenter(view: self)
     }()
     lazy var router: AnimalsRouter = {
         return AnimalsRouter(source: self)
     }()
     
+    // tutaj wszystkie outlety ze storybord'ow i xib'ow
     @IBOutlet weak var imageView: UIImageView!
     
+    // tutaj lifecycle ....viewDidLoad WillAppear itd
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     
-    
+    // tutaj wszystkie @IBActions
     @IBAction func changeImage() {
         presenter.changeImage()
     }
     @IBAction func changeColor() {
         presenter.changeColor()
     }
-    @IBAction func changePresenter() {
-        router.changePresenter()
-    }
     @IBAction func showDetail() {
-        router.showVCWithImage(image: #imageLiteral(resourceName: "Be"))
+        let image = imageView.image
+        router.showImageDetailViewController(image: image)
     }
     
     
-    
-    
+    // i koniec w viewControllerze powinny byc tylko actions outlets lifecycle i router/presenter
 }
 
 

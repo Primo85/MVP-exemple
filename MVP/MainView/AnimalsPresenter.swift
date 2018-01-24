@@ -8,7 +8,12 @@
 
 import UIKit
 
-class ColorPresenterClass: AnimalsPresenterProtocol {
+protocol AnimalsViewProtocol: class {
+    func setImage(image: UIImage)
+    func setColor(color: UIColor)
+}
+
+class AnimalsPresenter {
     
     init(view: AnimalsViewProtocol) {
         self.view = view
@@ -56,7 +61,5 @@ class ColorPresenterClass: AnimalsPresenterProtocol {
     private var colorFlag = 0
     private let colors: [UIColor] =
     [.red, .orange, .yellow, .green, .blue]
-    deinit {
-        print("deinit ColorPresenterClass")
-    }
+    
 }
